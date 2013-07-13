@@ -10,17 +10,17 @@ function log(msg)
 function onConnect(status)
 {
 	if (status == Strophe.Status.CONNECTING) {
-		//	log('Strophe is connecting.');
+		log('Strophe is connecting.');
 	}
 	else if (status == Strophe.Status.CONNFAIL) {
-		//log('Strophe failed to connect.');
+		log('Strophe failed to connect.');
 		$('#connect').get(0).value = 'connect';
 	}
 	else if (status == Strophe.Status.DISCONNECTING) {
-		//log('Strophe is disconnecting.');
+		log('Strophe is disconnecting.');
 	}
 	else if (status == Strophe.Status.DISCONNECTED) {
-		//log('Strophe is disconnected.');
+		log('Strophe is disconnected.');
 		$('#connect').get(0).value = 'connect';
 	}
 	else if (status == Strophe.Status.CONNECTED) {
@@ -28,13 +28,7 @@ function onConnect(status)
 		//log('ECHOBOT: Send a message to ' + connection.jid + ' to talk to me.');
 		log('Console: login successfully!');
 
-		$('#lock').bind('click', function () {
-	    	to_link = $('#to').get(0).value;
-	    	log('Console: target: ' + to_link + ' locked.');
-    	});
-
-		$('#send').bind('click', function() { sendMessage($('#txt').get(0).value); });
-
+		
 		connection.addHandler(onMessage, null, 'message', null, null, null); 
 		connection.send($pres().tree());
 	}
@@ -73,7 +67,6 @@ function onMessage(msg) {
 
 $(document).ready(function () {
 	connection = new Strophe.Connection(BOSH_SERVICE);
-
     // Uncomment the following lines to spy on the wire traffic.
     //connection.rawInput = function (data) { log('RECV: ' + data); };
     //connection.rawOutput = function (data) { log('SEND: ' + data); };
@@ -81,11 +74,20 @@ $(document).ready(function () {
     // Uncomment the following line to see all the debug output.
     //Strophe.log = function (level, msg) { log('LOG: ' + msg); };
 
+    $('#send').bind('click', function() { sendMessage($('#txt').get(0).value); });
+    
+    $('#lock').bind('click', function () {
+	    	to_link = $('#to').get(0).value;
+	    	log('Console: target: ' + to_link + ' locked.');
+    	});
 
+    
     $('#connect').bind('click', function () {
+
     	var button = $('#connect').get(0);
     	if (button.value == 'connect') {
-    		button.value = 'disconnect';   
+    		button.value = 'disconnect';
+    		connection.reset();
     		connection.connect($('#jid').get(0).value, $('#pass').get(0).value,	onConnect);
     	}
     	else {
