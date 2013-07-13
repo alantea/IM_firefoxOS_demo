@@ -1,0 +1,111 @@
+section[role="register"] button:hover, 
+section[role="login"] button:hover{
+  width: 100%;
+  height: 3.8rem;
+  margin: 0 0 1rem;
+  padding: 0 1.5rem;
+  -moz-box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #fafafa url(buttons/images/ui/default.png) repeat-x left bottom / auto 100%;
+  border: 0.1rem solid #a6a6a6;
+  border-radius: 0.2rem;
+  font: 500 1.6rem/3.8rem 'MozTT', Sans-serif;
+  color: white;
+  text-align: center;
+  text-shadow: 0.1rem 0.1rem 0 rgba(255,255,255,0.3);
+  text-decoration: none;
+  outline: none;
+  background-color: #808ef4;
+  text-align: bottom;
+  border-collapse: 0.1rem;
+  box-shadow: 0.5rem;
+}
+
+section[role="register"] button, 
+section[role="login"] button{
+	width: 100%;
+  height: 3.8rem;
+  margin: 0 0 1rem;
+  padding: 0 1.5rem;
+  -moz-box-sizing: border-box;
+  display: inline-block;
+  vertical-align: middle;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  background: #fafafa url(buttons/images/ui/default.png) repeat-x left bottom / auto 100%;
+  border: 0.1rem solid #a6a6a6;
+  border-radius: 0.2rem;
+  font: 500 1.6rem/3.8rem 'MozTT', Sans-serif;
+  color: white;
+  text-align: center;
+  text-shadow: 0.1rem 0.1rem 0 rgba(255,255,255,0.3);
+  text-decoration: none;
+  outline: none;
+  background-color: #ff3600;
+  text-align: bottom;
+  border-collapse: 0.1rem;
+  box-shadow: 0.5rem;
+}
+body{
+	background: radial-gradient(ellipse at left, rgba(244,155,128,1) 0%,rgba(250,78,26,0.8) 100%);
+	
+}
+
+section[role="register"] label, 
+section[role="login"] label{
+	color: #ff3600;
+  color: white;
+	font-size: 16px;
+  font-style: 'MozTT', Sans-serif;
+}
+section[role="login"] div{
+	height: 150px;
+	width: 100%;
+}
+
+section[role="login"] input,
+section[role="register"] input{
+	-moz-box-sizing: border-box;
+	display: block;
+	overflow: hidden;
+	width: 100%;
+	height: 3rem;
+	resize: none;
+	padding: 0 0.8rem;
+	font: 1.8rem/4rem "MozTT", Sans-serif;
+	border: 0.1rem solid #ccc;
+	border-radius: 0.3rem;
+	box-shadow: none; /* override the box-shadow from the system (performance issue) */
+	background: #fff url(input_areas/images/ui/shadow.png) repeat-x;
+}
+
+section[role="friend_page"] #friendlist{
+  padding: 20px;
+}
+
+section[role="friend_page"] .friend{
+  display:table-row; 
+  vertical-align: middle;
+}
+
+section[role="friend_page"] .friend img{
+  width: 60px;
+  height: 60px;
+  border-radius: 10px;
+}
+
+section[role="friend_page"] .friend span{
+  font: 1.8rem/4rem "MozTT", Sans-serif;
+  font-size: 25px;
+  border-width: 5px;
+  color: white;
+  padding-left: 1.5rem;
+  height:60px;
+  width: 100%;
+  text-shadow: 0.1rem 0.1rem 0 rgba(255,255,255,0.3);
+}
