@@ -14,7 +14,7 @@
 		<link rel="stylesheet" href="./style.css">
 	</head>
 	<body>
-		<section role="region" id="login">
+		<section role="region" id="login" aria-hidden="true">
 			<header>
 				<a href="#"><span class="icon icon-user">user</span></a>
 				<h1>Welcome TO FIM</h1>
@@ -86,22 +86,22 @@
 			</div>
 		</section>
 
-		<section role="region" id="chat" aria-hidden="true">
+		<section role="region" id="chat" aria-hidden="false">
 			<header>
 				<a href="#"><span class="icon icon-back">back</span></a>
 				<h1>Friend's name</h1>
 			</header>
-			<div id="chatcontact">
-				<div>
-					Jon:heeeeee
+			<article id="chatcontact">
+				<div class="chat">
+					Idiot iceman1216: Hello~~~
 				</div>
-				<div>
-					GEE:LOLLLLLLLLLL
+				<div class="chat">
+					Wise Veronica: YOYO~~~~~
 				</div>
-			</div>
+			</article>
 			<footer>
  				<form role="search" class="bottom">
-      				<button class="icon icon-attachment">Attachment</button>
+      				<!--<button class="icon icon-attachment">Attachment</button>-->
       				<button type="submit">Send</button>
       				<p>
         				<textarea placeholder="Message" name="userchat" required></textarea>

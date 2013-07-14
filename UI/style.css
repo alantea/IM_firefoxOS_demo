@@ -48,3 +48,21 @@ fieldset {
   font: 1.8rem/1em "MozTT", Sans-serif;
   background: #fff url(input_areas/images/ui/shadow.png) repeat-x left top;
 }
+
+[role=region] > footer {
+  background: rgba(0,0,0,.2);
+  right: 0; bottom: 0; left: 0;
+  position: fixed;
+  text-align: center;
+}
+
+section[role=region] #chatcontact{
+  padding: 0.5rem;
+  padding-top: 1rem;
+}
+
+section[role=region] #chatcontact .chat{
+  font-size: 2rem;
+  margin-left: 0.5rem;
+  padding-top: 0.3rem;
+}
