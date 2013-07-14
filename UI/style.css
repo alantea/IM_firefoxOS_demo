@@ -5,7 +5,7 @@ section[role="region"] #friendlist{
 }
 
 section[role="region"] .friend{
-  background-color: #ec6941;
+  background: rgba(0,0,0,.1);
   padding: 0.1rem;
   margin: 0.2rem;
   width: 100%;
@@ -65,4 +65,48 @@ section[role=region] #chatcontact .chat{
   font-size: 2rem;
   margin-left: 0.5rem;
   padding-top: 0.3rem;
+}
+
+
+
+.slide-up-in {
+  animation-name: slide-up-in;
+  animation-duration: .6s;
+  transform: translateY(0%);
+  opacity: 1;
+}
+@keyframes slide-up-in {
+  0% { transform: translateY(30%); opacity: 0; }
+  100% { transform: translateY(0%); opacity: 1; }
+}
+
+.slide-down-out {
+  animation-name: slide-down-out;
+  animation-duration: .6s;
+  transform: translateY(30%);
+  opacity: 0;
+}
+@keyframes slide-down-out {
+  0% { transform: translateY(0%); opacity: 1; }
+  100% { transform: translateY(30%); opacity: 0; }
+}
+
+.slide-right-in {
+  animation-name: slide-right-in;
+  animation-duration: .6s;
+  transform: translateX(0%);
+}
+@keyframes slide-right-in {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0%); }
+}
+
+.slide-left-out {
+  animation-name: slide-left-out;
+  animation-duration: .6s;
+  transform: translateX(-100%);
+}
+@keyframes slide-left-out {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-100%); }
 }

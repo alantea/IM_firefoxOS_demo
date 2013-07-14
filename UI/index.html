@@ -12,9 +12,11 @@
 		<link rel="stylesheet" href="./style/status.css">
 		<link rel="stylesheet" href="./style/switches.css">
 		<link rel="stylesheet" href="./style.css">
+		<script src="./jquery-1.10.2.min.js"></script>
+		<script src="./js/test.js"></script>
 	</head>
 	<body>
-		<section role="region" id="login" aria-hidden="true">
+		<section role="region" id="loginpage" aria-hidden="true">
 			<header>
 				<a href="#"><span class="icon icon-user">user</span></a>
 				<h1>Welcome TO FIM</h1>
@@ -24,12 +26,12 @@
 				<fieldset>
 				<p>
 					<label for="login_name">username</label>
-					<input type="text" placeholder="Username" name="login_name" required>
+					<input type="text" placeholder="Username" name="login_name">
         			<button type="reset">Clear</button>
 				</p>
 				<p>
 					<label for="login_pwd">password</label>
-					<input type="text" placeholder="Password" name="login_pwd" required>
+					<input type="text" placeholder="Password" name="login_pwd">
 					<button type="reset">Clear</button>
 				</p>
 				<p class="bb-docs">
@@ -40,7 +42,7 @@
 			</form>
 		</section>
 
-		<section role="region" id="register" aria-hidden="true">
+		<section role="region" id="registerpage" aria-hidden="true">
 			<header>
 				<a href="#"><span class="icon icon-back">back</span></a>
 				<h1>Register</h1>
@@ -70,23 +72,26 @@
 			</form>
 		</section>
 
-		<section role="region" id="friend" aria-hidden="true">
+		<section role="region" id="friendpage" aria-hidden="true">
 			<header>
 				<a href="#"><span class="icon icon-back">back</span></a>
-				<h1>Friend</h1>
+				<menu type="toolbar">
+      				<a href="#"><span class="icon icon-add">add</span></a>
+      			</menu>
+      			<h1>Friend</h1>
 			</header>
 			<h1>app interview</h1>
 			<div id="friendlist">
-				<dl class="friend" rowspan="2">
-					<img src="temp_logo.jpg"/><span>jonn</span><span></span>
+				<dl class="friend" id="Peter">
+					<img src="temp_logo.jpg"/><span>Peter</span><span></span>
 				</dl>
-				<dl class="friend">
+				<dl class="friend" id="john">
 					<img src="temp_logo.jpg"/><span>jonn</span><span></span>
 				</dl>
 			</div>
 		</section>
 
-		<section role="region" id="chat" aria-hidden="false">
+		<section role="region" class="chat" id="chatpage" aria-hidden="true">
 			<header>
 				<a href="#"><span class="icon icon-back">back</span></a>
 				<h1>Friend's name</h1>
@@ -110,7 +115,7 @@
 			</footer>
 		</section>
 
-		<section role="region" id="" aria-hidden="true">
+		<section role="region" id="" aria-hidden="false">
 			<header>
 				<a href="#"><span class="icon icon-back">back</span></a>
 				<h1>Main Page</h1>
