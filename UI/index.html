@@ -21,6 +21,7 @@
 			</header>
 			<h1>app interview</h1>
 			<form>
+				<fieldset>
 				<p>
 					<label for="login_name">username</label>
 					<input type="text" placeholder="Username" name="login_name" required>
@@ -31,20 +32,22 @@
 					<input type="text" placeholder="Password" name="login_pwd" required>
 					<button type="reset">Clear</button>
 				</p>
+				<p class="bb-docs">
+					<button id="login">log in</button>
+					<button id="unregister">register now</button>
+				</p>
+				</fieldset>
 			</form>
-			<div class="bb-docs">
-				<button id="login">log in</button>
-				<button id="unregister">register now</button>
-			</div>
 		</section>
 
-		<section role="region" id="register">
+		<section role="region" id="register" aria-hidden="true">
 			<header>
 				<a href="#"><span class="icon icon-back">back</span></a>
 				<h1>Register</h1>
 			</header>
 			<h1>app interview</h1>
 			<form>
+				<fieldset>
 				<p>
 					<label for="reg_name">username</label>
 					<input type="text" placeholder="Username" name="reg_name" required>
@@ -60,13 +63,14 @@
 					<input type="text" placeholder="Password" name="confirm_pwd" required>
 					<button type="reset">Clear</button>
 				</p>
+				<p class="bb-docs">
+					<button id="register">register</button>
+				</p>
+				</fieldset>
 			</form>
-			<div class="bb-docs">
-				<button id="register">register</button>
-			</div>
 		</section>
 
-		<section role="region" id="friend">
+		<section role="region" id="friend" aria-hidden="true">
 			<header>
 				<a href="#"><span class="icon icon-back">back</span></a>
 				<h1>Friend</h1>
@@ -82,7 +86,7 @@
 			</div>
 		</section>
 
-		<section role="region" id="chat">
+		<section role="region" id="chat" aria-hidden="true">
 			<header>
 				<a href="#"><span class="icon icon-back">back</span></a>
 				<h1>Friend's name</h1>
@@ -106,7 +110,7 @@
 			</footer>
 		</section>
 
-		<section role="region" id="">
+		<section role="region" id="" aria-hidden="true">
 			<header>
 				<a href="#"><span class="icon icon-back">back</span></a>
 				<h1>Main Page</h1>
