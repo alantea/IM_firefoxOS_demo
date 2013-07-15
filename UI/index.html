@@ -12,6 +12,9 @@
 		<link rel="stylesheet" href="./style/status.css">
 		<link rel="stylesheet" href="./style/switches.css">
 		<link rel="stylesheet" href="./style.css">
+		<link rel="stylesheet" href="./slide_side/pageslide.css">
+		<script src="./slide_side/pageslide.js"></script>
+		<script src="./slide_side/pageslide.min.js"></script>
 		<script src="./jquery-1.10.2.min.js"></script>
 		<script src="./js/test.js"></script>
 	</head>
@@ -19,6 +22,9 @@
 		<section role="region" id="loginpage" aria-hidden="true">
 			<header>
 				<a href="#"><span class="icon icon-user">user</span></a>
+				<menu type="toolbar">
+      				<a href="#"><span class="icon icon-close">close</span></a>
+      			</menu>
 				<h1>Welcome TO FIM</h1>
 			</header>
 			<h1>app interview</h1>
@@ -82,12 +88,12 @@
 			</header>
 			<h1>app interview</h1>
 			<div id="friendlist">
-				<dl class="friend" id="Peter">
+				<div class="friend" id="Peter"> <!-- div  VS.  dl -->
 					<img src="temp_logo.jpg"/><span>Peter</span><span></span>
-				</dl>
-				<dl class="friend" id="john">
+				</div>
+				<div class="friend" id="john">
 					<img src="temp_logo.jpg"/><span>jonn</span><span></span>
-				</dl>
+				</div>
 			</div>
 		</section>
 
@@ -115,10 +121,30 @@
 			</footer>
 		</section>
 
-		<section role="region" id="" aria-hidden="false">
+		<section role="region" id="mainpage" aria-hidden="false">
 			<header>
-				<a href="#"><span class="icon icon-back">back</span></a>
+				<a href="#" id="test"><span class="icon icon-user">user</span></a>
+				<menu type="toolbar">
+      				<a href="#"><span class="icon icon-close">close</span></a>
+      			</menu>
 				<h1>Main Page</h1>
+				<div id="main">
+					<div class="row">
+						<div id="friend_link">friends</div>
+						<div id="setting_link">setting</div>
+						<div id="chat_link">chat</div>
+					</div>
+					<div class="row">
+						<div>4</div>
+						<div>5</div>
+						<div>6</div>
+					</div>
+					<div class="row">
+						<div>7</div>
+						<div>8</div>
+						<div>9</div>
+					</div>
+				</div>
 			</header>
 		</section>
 
