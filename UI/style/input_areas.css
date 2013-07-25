@@ -298,8 +298,11 @@ form[role="search"] p button[type="reset"] {
   right: 0;
 }
 
-form[role="search"] button[type="submit"] {
-  float: right;
+
+/*lollllllllllllllllllllllllllllllllllllllllllllllllllllllllllll (submit -> button)*/
+form[role="search"] button[type="button"], /*here*/
+form[role="search"] button[type="submit"] { 
+  float: right; 
   min-width: 6rem;
   height: 3.7rem;
   padding: 0 1.5rem;
@@ -316,23 +319,27 @@ form[role="search"] button[type="submit"] {
   margin: 0;
 }
 
+form[role="search"] button[type="button"], /*here*/
 form[role="search"].bottom button[type="submit"] {
   color: #333;
   background: url(input_areas/images/ui/separator.png) no-repeat 0 50%,
               url(input_areas/images/ui/active.png) repeat-x 0 100%;
 }
 
+
 form[role="search"].skin-dark button[type="submit"] {
   color: #fff;
   background-image: url(input_areas/images/ui/separator-dark.png);
 }
 
+form[role="search"] button[type="button"] + p > textarea, /*here*/
 form[role="search"] button[type="submit"] + p > textarea {
   height: 3rem;
   line-height: 2rem;
   font-size: 1.8rem;
 }
 
+form[role="search"] button[type="button"] + p button, /*here*/
 form[role="search"] button[type="submit"] + p button {
   height: 3.7rem;
 }
@@ -342,10 +349,12 @@ form[role="search"].full button[type="submit"] {
 }
 
 form[role="search"] button.icon:active,
+form[role="search"] button[type="button"]:active, /*here*/
 form[role="search"] button[type="submit"]:active {
   background: #008caa;
   text-shadow: 0.1rem 0.1rem 0 rgba(255,255,255,.3);
 }
+
 
 form[role="search"] button[type="submit"][disabled] {
   color: #adadad;

@@ -2,6 +2,7 @@ html, body { height: 100%; }
 
 section[role="region"] #friendlist{
   padding: 1rem;
+  margin-top: 0rem; 
 }
 
 section[role="region"] .friend{
@@ -38,6 +39,7 @@ form {
   margin: 1rem 2rem;
 }
 
+/* change textinput UI */
 fieldset {
   position: relative;
   overflow: hidden;
@@ -49,6 +51,7 @@ fieldset {
   background: #fff url(input_areas/images/ui/shadow.png) repeat-x left top;
 }
 
+
 [role=region] > footer {
   background: rgba(246,179,127,.7);
   right: 0; bottom: 0; left: 0;
@@ -56,19 +59,20 @@ fieldset {
   text-align: center;
 }
 
-section[role=region] #chatcontact{
+/*chat page*/
+section[role="region"] #chatcontact{
   padding: 0.5rem;
   padding-top: 1rem;
 }
 
-section[role=region] #chatcontact .chat{
+section[role="region"] #chatcontact .chat{
   font-size: 2rem;
   margin-left: 0.5rem;
   padding-top: 0.3rem;
 }
 
 /* main page */
-section[role=region] #main{
+section[role="region"] #main{
   padding: 2rem;
   width:85%;
   margin-right: auto;
@@ -82,7 +86,8 @@ section[role=region] #main{
   display: table;
 }
 
-section[role=region] #main .row{
+/*main page*/
+section[role="region"] #main .row{
   vertical-align: middle;
   height: 35%;
   width: 80%;
@@ -90,7 +95,7 @@ section[role=region] #main .row{
   display: table-row;
 }
 
-section[role=region] #main .row div{
+section[role="region"] #main .row div{
 display: table-cell;
 text-align: center;
 width: 25%;
@@ -106,6 +111,13 @@ box-shadow: rgba(255,255,255,.2);
 border-style: outset;
 }
 
+/* search style */
+section[role="region"] #usersearch {
+  border-radius: 2rem;
+  margin-bottom: 0rem;
+}
+
+/*animator*/
 .slide-up-in {
   animation-name: slide-up-in;
   animation-duration: .6s;

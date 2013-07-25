@@ -32,17 +32,17 @@
 				<fieldset>
 				<p>
 					<label for="login_name">username</label>
-					<input type="text" placeholder="Username" name="login_name">
+					<input type="text" placeholder="Username" name="login_name" required>
         			<button type="reset">Clear</button>
 				</p>
 				<p>
 					<label for="login_pwd">password</label>
-					<input type="text" placeholder="Password" name="login_pwd">
+					<input type="text" placeholder="Password" name="login_pwd" required>
 					<button type="reset">Clear</button>
 				</p>
 				<p class="bb-docs">
 					<button id="login">log in</button>
-					<button id="unregister">register now</button>
+					<button type="button" id="unregister">register now</button>
 				</p>
 				</fieldset>
 			</form>
@@ -82,11 +82,17 @@
 			<header>
 				<a href="#"><span class="icon icon-back">back</span></a>
 				<menu type="toolbar">
-      				<a href="#"><span class="icon icon-add">add</span></a>
+      				<a href="#"><span class="icon icon-add" id="addfriend">add</span></a>
       			</menu>
       			<h1>Friend</h1>
 			</header>
 			<h1>app interview</h1>
+			<form role="search" id="usersearch">
+    			<p>
+    				<input type="text" placeholder="Search..." required>
+        			<button type="reset">Clear</button>
+   				</p>
+    		</form>
 			<div id="friendlist">
 				<div class="friend" id="Peter"> <!-- div  VS.  dl -->
 					<img src="temp_logo.jpg"/><span>Peter</span><span></span>
@@ -97,7 +103,7 @@
 			</div>
 		</section>
 
-		<section role="region" class="chat" id="chatpage" aria-hidden="true">
+		<section role="region" class="chat" id="chatpage" aria-hidden="false">
 			<header>
 				<a href="#"><span class="icon icon-back">back</span></a>
 				<h1>Friend's name</h1>
@@ -113,21 +119,22 @@
 			<footer>
  				<form role="search" class="bottom">
       				<!--<button class="icon icon-attachment">Attachment</button>-->
-      				<button type="submit">Send</button>
+      				<button type="button" id="send">Send</button>
       				<p>
-        				<textarea placeholder="Message" name="userchat" required></textarea>
+        				<textarea placeholder="Message" id="chatting" name="userchat" required></textarea>
       				</p>
     			</form>
 			</footer>
 		</section>
 
-		<section role="region" id="mainpage" aria-hidden="false">
+		<section role="region" id="mainpage" aria-hidden="true">
 			<header>
-				<a href="#" id="test"><span class="icon icon-user">user</span></a>
+				<a href="#"><span class="icon icon-user">user</span></a>
 				<menu type="toolbar">
       				<a href="#"><span class="icon icon-close">close</span></a>
       			</menu>
 				<h1>Main Page</h1>
+			</header>
 				<div id="main">
 					<div class="row">
 						<div id="friend_link">friends</div>
@@ -145,6 +152,12 @@
 						<div>9</div>
 					</div>
 				</div>
+		</section>
+
+		<section role="region" id="addpage"  aria-hidden="true">
+			<header>
+				<a herf="#"><span class="icon icon-back">back</span></a>
+				<h1>[+] Friend</h1>
 			</header>
 		</section>
 
