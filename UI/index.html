@@ -17,6 +17,8 @@
 		<script src="./slide_side/pageslide.min.js"></script>
 		<script src="./jquery-1.10.2.min.js"></script>
 		<script src="./js/test.js"></script>
+		<script src="./js/talk.js"></script>
+		<script src="./js/strophe.js"></script>
 	</head>
 	<body>
 		<section role="region" id="loginpage" aria-hidden="true">
@@ -115,13 +117,17 @@
 				<div class="chat">
 					Wise Veronica: YOYO~~~~~
 				</div>
+				<div class="pic">
+					<img src="temp_logo.jpg">
+				</div>
 			</article>
 			<footer>
  				<form role="search" class="bottom">
-      				<!--<button class="icon icon-attachment">Attachment</button>-->
+      				<button type="button" class="icon icon-attachment">Attachment</button>
+      				<div id="image-presenter"></div>
       				<button type="button" id="send">Send</button>
       				<p>
-        				<textarea placeholder="Message" id="chatting" name="userchat" required></textarea>
+        				<textarea placeholder="Message" id="chatting" name="userchat" ></textarea>
       				</p>
     			</form>
 			</footer>
@@ -152,13 +158,6 @@
 						<div>9</div>
 					</div>
 				</div>
-		</section>
-
-		<section role="region" id="addpage"  aria-hidden="true">
-			<header>
-				<a herf="#"><span class="icon icon-back">back</span></a>
-				<h1>[+] Friend</h1>
-			</header>
 		</section>
 
 	</body>
