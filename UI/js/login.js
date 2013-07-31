@@ -2,8 +2,8 @@ var Login = {
 	connection: null,
 
 	start: function() {
-		Login.connection = new Strophe.Connection(BOSH_SERVICE);
-		Login.connection.connect($('#login_name').get(0).value, $('#login_pwd').get(0).value,	Login.onConnect);
+		Login.connection = new Strophe.Connection(Main.BOSH_SERVICE);
+		Login.connection.connect($('#login_name').get(0).value, $('#login_pwd').get(0).value, Login.onConnect);
 	},
 
 	log: function (msg) {
@@ -17,7 +17,6 @@ var Login = {
 		else if (status == Strophe.Status.CONNFAIL) {
 			//Login.log('Strophe failed to connect.');
 			//$('#connect').get(0).value = 'connect';
-			alert('Connect to server failed.');
 		}
 		else if (status == Strophe.Status.AUTHFAIL) {
 			//Login.log('Authentication attempt failed, Please check your jid and password');

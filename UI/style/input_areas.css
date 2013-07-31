@@ -88,7 +88,7 @@ li textarea + button[type="reset"]:after {
 form p input + button[type="reset"],
 form p textarea + button[type="reset"] {
   top: 0;
-  margin: 0;
+  margin: 1.8rem;                           /*0 to 1.8 to middle*/
 }
 
 textarea {

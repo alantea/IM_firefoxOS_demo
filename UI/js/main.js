@@ -9,7 +9,7 @@ $(document).ready(function(){
 	Talk.start();
   /* 前往註冊的按鈕*/
 	$('#unregister').click(function(){
-		$('#registerpage').attr('aria-hidden', 'false');
+		  $('#registerpage').attr('aria-hidden', 'false');
    		$('#loginpage').attr('aria-hidden', 'true');
    		/*$('#registerpage').addClass('slide-up-in');
    		$('#loginpage').addClass('slide-down-out');
