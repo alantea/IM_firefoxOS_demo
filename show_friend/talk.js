@@ -35,18 +35,40 @@ function onConnect(status)
 		connection.roster.init( connection );
 		connection.roster.get( temp );
 
-
 		connection.addHandler(onMessage, null, 'message', null, null, null); 
+		connection.addHandler(upFriend, null, 'presence', null, null, null);
+
 		connection.send($pres().tree());
 	}
 }
 
+function upFriend(fri)
+{
+	var type = fri.getAttribute('type');
+	var from = fri.getAttribute('from');
+
+	if( type ==	"unsubscribed" )
+	{
+		log2( from + " is refused you." );
+	}
+
+	return true;
+}
+
 function temp()
 {
+	
+	var st;
 	for( var i in connection.roster.items )
 	{
-		log2( connection.roster.items[i].jid );
+		st = connection.roster.items[i].jid ;
+		if( connection.roster.items[i].subscription == "none" )
+		{
+			st += " : not subscribe";
+		}
+		log2( st );
 	}
+	
 }
 
 function sendMessage(txt)
@@ -107,5 +129,12 @@ $(document).ready(function () {
     		connection.disconnect();
     	}
     });
+
+    $('#add').bind('click', function() {
+		var add_jid = $('#newfriend').get(0).value + '@ccs.cs.ccu.edu.tw';
+		connection.roster.subscribe( add_jid );
+		log( "add " + add_jid + " friend but not subscribe." );
+	});
+
 });
 
